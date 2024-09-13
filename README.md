@@ -4,4 +4,4 @@
 2-Ayelen Nataly Garcia Uriarte
 
 # Descripcion:
-Hacemos un sistema para que(en un futuro) distintos usuarios puedan incribirse a una actividad del club.
+Desarrollamos un sistema para que(en un futuro) distintos usuarios puedan incribirse a una actividad del club.
