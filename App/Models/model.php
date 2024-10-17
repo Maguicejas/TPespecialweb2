@@ -50,7 +50,14 @@ class TaskModel {
     
         return $tasks;
     }
-   
+    
+   public function obtenerItemPorCategoria($ID_categoria) {
+        $query = $this->db->prepare('SELECT * FROM actividad WHERE ID_Categoria = ?');
+        $query->execute([$ID_categoria]);
+
+        $actividades = $query->fetchAll(PDO::FETCH_OBJ);
+        return $actividades;
+    }
  
 
 
