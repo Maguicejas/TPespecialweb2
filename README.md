@@ -25,7 +25,7 @@ Una vez clonado debera crear las tablas necesarias en MySQL para poder acceder a
 
 Finalmente,luego de haber realizado los pasos anteriores, podra acceder al sitio mediante el link: localhost/Xsports.
 
-En #Descripcion esncontrara una breve explicación de como navegar por la página.
+En #Descripcion encontrara una breve explicación de como navegar por la página.
 
 
 
