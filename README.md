@@ -6,7 +6,7 @@ Ayelen Nataly Garcia Uriarte (A)
 
 # Descripcion:
 Desarrollamos un sistema para que distintos usuarios puedan ver la información de un club deportivo.
--Usuarios no logueados: solo podran acceder a la vistas de Home,Categorias,Actividades y Log in. En caso de querer acceder a la seccion Administrar primero deberán loguearse.
+- Usuarios no logueados: solo podran acceder a la vistas de Home,Categorias,Actividades y Log in. En caso de querer acceder a la seccion Administrar primero deberán loguearse.
 - Usuarios logueados: podran acceder a la sección Administar donde podrán agregar,eliminar o editar categorias y/o actividades del club.
 
 
