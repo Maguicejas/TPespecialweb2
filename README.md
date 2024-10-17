@@ -20,9 +20,11 @@ Desarrollamos un sistema para que distintos usuarios puedan ver la información 
 
 # Despliegue del sitio (servidor Apache y MySQL)
 Para poder desplegar el sitio primero debe hacer una clonación de este repositorio(TPespecialweb2).
+
 Una vez clonado debera crear las tablas necesarias en MySQL para poder acceder a los datos brindados, para esto podra utilizar el archivo xsports.sql  en el cual se encuentran las estructuras de las tablas, datos y relaciones de estas.
 
 Finalmente,luego de haber realizado los pasos anteriores, podra acceder al sitio mediante el link: localhost/Xsports.
+
 En #Descripcion esncontrara una breve explicación de como navegar por la página.
 
 
