@@ -118,16 +118,22 @@ class TaskController {
         header('Location: ' . BASE_URL . 'actividades');
     }
 
-    public function eliminarCategoria() {
+   public function eliminarCategoria() {
         $id=$_POST['eliminarCate'];
 
         if (!$id) {
             return $this->view->showError("No existe la categoria con el id=$id");
         }
 
+        $actividades= $this->model->obtenerItemPorCategoria($id);
+        if(!empty($actividades)){
+            $this->view->showError("Para eliminar una categoria es necesario que no contenga actividades");
+        }else{
+            
         $this->model->borrarCategoria($id);
-
         header('Location: ' . BASE_URL . 'listar');
+        }
+
     }
 
     //editar
