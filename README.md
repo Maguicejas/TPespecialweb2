@@ -16,7 +16,8 @@ Desarrollamos un sistema para que distintos usuarios puedan ver la información 
 
 
 # DER
-![diagrama 3](https://github.com/user-attachments/assets/c4ece700-a900-45e7-bad6-5d216ec1d306)
+![diagrama3](https://github.com/user-attachments/assets/58d2f481-a1df-4864-820e-5bb746f1b7c7)
+
 
 # Despliegue del sitio (servidor Apache y MySQL)
 Para poder desplegar el sitio primero debe hacer una clonación de este repositorio(TPespecialweb2).
