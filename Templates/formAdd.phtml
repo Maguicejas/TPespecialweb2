@@ -1,0 +1,66 @@
+<?php require 'Templates/Layouts/Header.phtml' ?>
+
+<?php if ($error): ?>
+    <div class='alert alert-danger' role='alert'>
+        <?= $error ?>
+    </div>
+<?php endif ?>
+
+
+<h3>1-Administrar Categorias</h3>
+
+<h4>Agregar</h4>
+<form method='post' action='nuevaCategoria'>
+    <div>
+        <label for='categoria'>Nombre Categoria</label>
+        <input type='text' class='form-control' id='categoria' name='categoria' required>
+    </div>
+    <div >
+        <label for='categoria'>Imagen(url)</label>
+        <input type='url' class='form-control' id='foto' name='foto'>
+    </div>
+
+    <button type='submit' class='btn btn-primary'>Agregar</button>
+    <p></p>
+</form>
+
+<h4>Editar</h4>
+<form method='post' action='editar'>
+    <div class='form-group'>
+        <label for='nombreCate'>Categoria</label>
+        <select type="int" name="nombreCate" id="nombreCate">
+            <?php foreach($tasks as $task):?>
+                    <option value="<?= $task->ID_Categoria?>"><?= $task-> nombreCate ?></option>
+                    <?php endforeach ?>
+
+        </select>
+    </div>
+    <div class='form-group'>
+        <label for='nombrenuevo'>Nuevo nombre
+
+          <input type='text' class='form-control' id='nombrenuevo' name='nombrenuevo' required>
+          
+       </label>
+       
+       <button type='submit' class='btn btn-primary'>Editar</button>  
+    </div>
+    <p></p>
+</form>
+
+<h4>Eliminar</h4>
+<form method='post' action='eliminarCategoria'>
+    <div class='form-group'>
+        <label for='eliminarCate'>Categoria</label>
+        <select type="int" name="eliminarCate" id="eliminarCate">
+            <?php foreach($tasks as $task):?>
+                    <option value="<?= $task->ID_Categoria?>"><?= $task-> nombreCate ?></option>
+                    <?php endforeach ?>
+
+        </select>
+    
+       <button type='submit' class='btn btn-primary'>Eliminar</button>
+   </div>
+
+    
+</form>
+

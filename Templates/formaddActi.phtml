@@ -1,0 +1,110 @@
+
+
+<?php if ($error): ?>
+    <div class='alert alert-danger' role='alert'>
+        <?= $error ?>
+    </div>
+<?php endif ?>
+
+&nbsp;
+
+<h3>2-Administrar Actividades</h3>
+
+<h4>Agregar</h4>
+<form method='post' action='nuevaactividad'>
+    <div class='form-group'>
+        <label for='deporte'>Deporte</label>
+        <input type="text" class='form-control' id='deporte' name='deporte' required>
+    </div>
+    <div class='form-group'>
+        <label for='horario'>Horario</label>
+        <input type='time' class='form-control' id='horario' name='horario' required>
+    </div>
+    <div class='form-group'>
+        <label for='dia'>Dia</label>
+        <input type="date" class='form-control' id='dia' name='dia' required>
+    </div>
+    <div class='form-group'>
+        <label for='profe'>Profesor</label>
+        <input type="text" class='form-control' id='profe' name='profe' required>
+    </div>
+    <div class='form-group'>
+        <label for='cate'>Categoria perteneciente</label>
+        
+        <select type="int" name="cate" id="cate">
+            <?php foreach($tasks as $task):?>
+                    <option value="<?= $task->ID_Categoria?>"><?= $task-> nombreCate ?></option>
+                    <?php endforeach ?>
+        </select>
+    </div>
+    <div class='form-group'>
+        <label for='pago'>Forma de pago</label>
+        
+        <select type="int" name="pago" id="pago">
+            <?php foreach($club as $actividades):?>
+                    <option value="<?= $actividades->ID_Club?>"><?= $actividades-> formaPago ?></option>
+                    <?php endforeach ?>
+        </select>
+    </div>
+    <div >
+        <label for='categoria'>Imagen(url)</label>
+        <input type='url' class='form-control' id='foto' name='foto'>
+    </div>
+
+   <div><button type='submit' class='btn btn-primary'>Agregar</button></div> 
+
+</form>
+
+&nbsp;
+
+<h4>Editar (solo horarios y dias)</h4>
+<form method='post' action='editarActividad'>
+    <div class='form-group'>
+        <label for='idAct'>Deporte</label>
+        <select type="int" name="idAct" id="idAct">
+
+            <?php foreach($acti as $actividades):?>
+                    <option value="<?= $actividades->ID_Actividad?>"><?= $actividades-> deporte ?></option>
+                    <?php endforeach ?>         
+        </select>
+    </div>
+    <div class='form-group'>
+        <label for='hora'>Horario</label>
+          <input type='time' class='form-control' id='hora' name='hora' required>
+       
+    </div>
+    <div class='form-group'>
+        <label for='dia'>Dia</label>
+           <input type="date" class='form-control' id='dia' name='dia' required>
+     </div>   
+     <div class='form-group'>
+        <label for='pago'>Forma de pago</label>
+        
+        <select type="int" name="pago" id="pago">
+            <?php foreach($club as $actividades):?>
+                    <option value="<?= $actividades->ID_Club?>"><?= $actividades-> formaPago ?></option>
+                    <?php endforeach ?>
+        </select>
+     <button type='submit' class='btn btn-primary'>Editar</button> 
+    </div> 
+     
+</form>
+&nbsp;
+
+<h4>Eliminar</h4>
+<form method='post' action='eliminarActividad'>
+    <div class='form-group'>
+            <label for='eliminarAct'>Deporte
+                <select type="int" name="eliminarAct" id="eliminarAct">
+                    <?php foreach($acti as $actividades):?>
+                            <option value="<?= $actividades->ID_Actividad?>"><?= $actividades-> deporte ?></option>
+                            <?php endforeach ?>
+                </select>
+            </label>
+
+            <button type='submit' class='btn btn-primary'>Eliminar</button>
+     </div>
+   
+</form>
+
+<?php require 'Templates/Layouts/footer.phtml' ?>

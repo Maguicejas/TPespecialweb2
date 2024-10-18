@@ -1,0 +1,24 @@
+<?php require 'Templates/Layouts/Header.phtml' ?>
+
+
+
+<h1><?=$titulo?></h1>
+<ul class="list-group">
+<?php foreach($items as $task): ?>
+    <li class="list-group-item item-task ">
+     <div class="label">
+        <a href="informacion/<?=$task->ID_Actividad?>"> 
+            <b><?= $task->deporte ?> </b>
+        </a>
+       <div>
+         <img src="<?= $task->img?> " class="img" style="max-width: 290px;"/>
+      </div>
+    </div>
+        
+    </li>
+<?php endforeach ?>
+</ul>
+
+
+
+<?php require 'Templates/Layouts/footer.phtml' ?>
